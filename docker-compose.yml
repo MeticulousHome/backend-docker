@@ -1,0 +1,28 @@
+services:
+  backend:
+    image: ghcr.io/meticuloushome/meticulous-backend:latest
+    container_name: meticulous-backend
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+    user: "${USER_ID:-root}:${GROUP_ID:-0}"
+    environment:
+      - BACKEND=emulation
+      - EMULATION_SPEED=100
+      - CONFIG_PATH=/app/config
+      - LOG_PATH=/app/logs
+      - PROFILE_PATH=/app/profiles
+      - HISTORY_PATH=/app/history/shots
+      - DEBUG_HISTORY_PATH=/app/history/debug
+      - UPDATE_PATH=/tmp/firmware
+      - ZEROCONF_OVERWRITE=192.168.2.11/24,Mimoja-Datenschleuder
+      - PORT=8080
+      - DEFAULT_IMAGES=/app/images/default
+      - IMAGES_PATH=/app/images/profile-images
+    volumes:
+      - ./config:/app/config
+      - ./logs:/app/logs
+      - ./profiles:/app/profiles
+      - ./shots:/app/history
+      - ./images:/app/images/profile-images
