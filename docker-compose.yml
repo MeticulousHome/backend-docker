@@ -16,7 +16,7 @@ services:
       - HISTORY_PATH=/app/history/shots
       - DEBUG_HISTORY_PATH=/app/history/debug
       - UPDATE_PATH=/tmp/firmware
-      - ZEROCONF_OVERWRITE=192.168.2.11/24,Mimoja-Datenschleuder
+      - ZEROCONF_OVERWRITE=192.168.2.2/24,Meticulous-Emulated
       - PORT=8080
       - DEFAULT_IMAGES=/app/images/default
       - IMAGES_PATH=/app/images/profile-images
