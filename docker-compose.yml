@@ -20,6 +20,7 @@ services:
       - PORT=8080
       - DEFAULT_IMAGES=/app/images/default
       - IMAGES_PATH=/app/images/profile-images
+      - SYSTEM_SOUNDS=/app/sounds/
     volumes:
       - ./config:/app/config
       - ./logs:/app/logs
