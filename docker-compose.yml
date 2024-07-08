@@ -22,8 +22,8 @@ services:
       - IMAGES_PATH=/app/images/profile-images
       - SYSTEM_SOUNDS=/app/sounds/
     volumes:
-      - ./config:/app/config
-      - ./logs:/app/logs
-      - ./profiles:/app/profiles
-      - ./shots:/app/history
-      - ./images:/app/images/profile-images
+      - ./userdata/config:/app/config
+      - ./userdata/logs:/app/logs
+      - ./userdata/profiles:/app/profiles
+      - ./userdata/shots:/app/history
+      - ./userdata/images:/app/images/profile-images
