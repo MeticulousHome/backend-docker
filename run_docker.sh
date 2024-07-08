@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 echo "This computers IP addresses are:"
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
