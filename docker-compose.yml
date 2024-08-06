@@ -13,7 +13,7 @@ services:
       - CONFIG_PATH=/app/config
       - LOG_PATH=/app/logs
       - PROFILE_PATH=/app/profiles
-      - HISTORY_PATH=/app/history/shots
+      - HISTORY_PATH=/app/history
       - DEBUG_HISTORY_PATH=/app/history/debug
       - UPDATE_PATH=/tmp/firmware
       - ZEROCONF_OVERWRITE=192.168.2.2/24,Meticulous-Emulated
@@ -21,6 +21,7 @@ services:
       - DEFAULT_IMAGES=/app/images/default
       - IMAGES_PATH=/app/images/profile-images
       - SYSTEM_SOUNDS=/app/sounds/
+      - DEFAULT_PROFILES=/app/default_profiles
     volumes:
       - ./userdata/config:/app/config
       - ./userdata/logs:/app/logs
